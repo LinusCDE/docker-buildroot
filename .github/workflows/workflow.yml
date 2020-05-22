@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Build and push
+        uses: docker/build-push-action@v1
+        with:
+          username: linuscde
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: linuscde/buildroot
+          tags: latest
+          add_git_labels: true
