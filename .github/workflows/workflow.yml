@@ -19,5 +19,7 @@ jobs:
           username: linuscde
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: linuscde/buildroot
-          tags: latest
+          tags: |
+            latest
+            v1.0
           add_git_labels: true
