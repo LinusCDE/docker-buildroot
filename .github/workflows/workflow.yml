@@ -30,4 +30,4 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/buildroot:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/buildroot:v1.1
+            ${{ secrets.DOCKERHUB_USERNAME }}/buildroot:v1.2
