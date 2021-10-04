@@ -1,4 +1,4 @@
-FROM buildroot/base:20191027.2027
+FROM buildroot/base:20210922.2200
 
 USER root
 
